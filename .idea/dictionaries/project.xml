@@ -2,6 +2,7 @@
   <dictionary name="project">
     <words>
       <w>datefmt</w>
+      <w>postgre</w>
       <w>tablename</w>
       <w>роутеры</w>
     </words>

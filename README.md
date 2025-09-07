@@ -1,18 +1,34 @@
+# Sudoku API v1
+
+## Description
+
+A simple Sudoku API built with FastAPI to count user scores and store them in a PostgreSQL database.
+
+## Tech Stack
+
+- PostgreSQL >= v16.1
+- Python == v3.12
+
 # How to run
 
 #### Clone the repository
 
 ```
-git clone https://github.com/savelychercov/sudokapi.git
-cd sudokapi
+git clone https://github.com/savelychercov/sudoku-backend-py.git
+cd sudoku-backend-py
 ```
 
 #### Create and activate a virtual environment
 
 ```
-python -m venv venv
-venv\Scripts\activate
+python3 -m venv venv
+source venv/bin/activate \ source venv/Scripts/activate \ venv/Scripts/activate.bat
 pip install -r requirements.txt
+
+# if psycopg2 not installing run this command:
+sudo apt-get update
+sudo apt-get install libpq-dev python3-dev
+pip install psycopg2
 ```
 
 #### Create .env file
