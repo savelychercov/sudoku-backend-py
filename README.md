@@ -22,6 +22,12 @@ cp .env.example .env
 sudo nano .env
 ```
 
+#### Create the database
+
+```
+python create_db.py
+```
+
 #### Update the database
 
 ```

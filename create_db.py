@@ -9,10 +9,9 @@ async def create_db():
         port=settings.POSTGRES_PORT,
         user=settings.POSTGRES_USER,
         password=settings.POSTGRES_PASSWORD,
-        database="postgres"  # подключаемся к системной базе
+        database="postgres"
     )
 
-    # Проверяем, есть ли база
     db_exists = await conn.fetchval(
         "SELECT 1 FROM pg_database WHERE datname = $1",
         settings.POSTGRES_DB
