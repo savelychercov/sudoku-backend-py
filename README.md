@@ -57,7 +57,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 or
 
-pm2 start "venv/Scripts/python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000" --name fastapi-app
+pm2 start "venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000" --name sudoku --cwd ~/sudoku-backend-py
 ```
 
 ---
