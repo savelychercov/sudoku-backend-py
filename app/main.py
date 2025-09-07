@@ -8,6 +8,7 @@ from app.features.users import router as users_router
 from app.features.auth import router as auth_router
 from app.features.slash import router as slash_router
 from app.features.scores import router as scores_router
+from app.core.config import settings
 
 logger = setup_logging(level=logging.INFO)
 
@@ -19,7 +20,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(lifespan=lifespan, title="Sudoku API v1", version="1.0.0")
+app = FastAPI(lifespan=lifespan, root_path=settings.ROOT_PATH, title="Sudoku API v1", version="1.0.0")
 
 app.include_router(users_router.router)
 app.include_router(auth_router.router)

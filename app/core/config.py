@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     POSTGRES_HOST: str = "localhost"
     POSTGRES_PORT: int = 5432
     DATABASE_URL: str | None = None
+    ROOT_PATH: str = ""
     SECRET_KEY: str = "change-me-in-prod"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
